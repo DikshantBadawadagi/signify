@@ -18,6 +18,7 @@ import pickle
 import cv2
 import mediapipe as mp
 import numpy as np
+import subprocess
 
 app = Flask(__name__)
 
@@ -68,6 +69,8 @@ class User(db.Model, UserMixin):
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
+    pip_version = subprocess.check_output(['pip', '--version']).decode('utf-8')
+    print(f'Current pip version: {pip_version}')
     # session.clear()
     return render_template('dashboard.html')
 # ----------------------------------------------------
@@ -407,6 +410,8 @@ def video_feed():
     return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 # -----------------------------  end  ---------------------------
+
+from app import app
 
 if __name__ == '__main__':
     app.run(debug=True)
