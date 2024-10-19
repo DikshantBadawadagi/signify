@@ -7,4 +7,5 @@ WTForms~=3.0.1
 matplotlib~=3.7.2
 scikit-learn~=1.5.2
 Flask-Bcrypt
+netifaces~=0.11.0
 
