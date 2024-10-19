@@ -13,4 +13,5 @@ flask_sqlalchemy
 flask_login
 flask_wtf
 wtforms
+socketio
 gunicorn
