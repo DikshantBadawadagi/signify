@@ -9,4 +9,8 @@ scikit-learn~=1.5.2
 Flask-Bcrypt
 netifaces~=0.11.0
 flask_cors
+flask_sqlalchemy
+flask_login
+flask_wtf
+wtforms
 gunicorn
